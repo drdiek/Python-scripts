@@ -1,6 +1,6 @@
 def clr():
 	print("\033c"); # clear screen	
-	return;
+	return
 	
 
 def time_stamp():
