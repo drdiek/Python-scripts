@@ -1,0 +1,50 @@
+import pandas as pd
+
+df = pd.read_csv('./data/export_comics.csv')
+
+print(df['Tags'])
+
+df['Bag'] = ''
+
+df['Mylite'] = ''
+
+df['Mylar'] = ''
+
+df['Board'] = ''
+
+df['Box'] = ''
+
+print(df)
+
+
+for row in df['Tags']:
+
+    if isinstance(row, (int, float)):
+
+        print(row)
+
+    else:
+
+        tags = row.split(", ")
+
+        for tag in tags:
+
+            if (tag == 'Bag'):
+
+                df['Bag'].index = 'Bag'
+
+                print(df)
+
+
+#print(df.index)
+
+#print(len(df.index))
+
+#len_df = len(df.index)
+
+#print(df['Tags'].notnull())
+
+#print(df[df['Tags'].notnull()])
+
+
+
